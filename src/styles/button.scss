@@ -1,0 +1,90 @@
+.button {
+  display: inline-block;
+  border-radius: $small-border-radius;
+  padding: 14px 22px 14px;
+  font-size: 20px;
+  line-height: 25px;
+  border: 1px solid map-get($main_colors, 'body_color');
+  transition: color 0.15s ease-in, background-color 0.15s ease-in, border-color 0.15s ease-in;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_orange {
+    @extend .button;
+
+    $b_color: map-get($button-colors, 'orange');
+
+    background-color: $b_color;
+    border-color: $b_color;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($b_color, 10);
+      border-color: lighten($b_color, 10);
+    }
+
+    &:active {
+      background-color: darken($b_color, 10);
+      border-color: darken($b_color, 10);
+    }
+
+    &_invert {
+      @extend .button;
+
+      background-color: #fff;
+      border-color: $b_color;
+      color: $b_color;
+
+      &:hover {
+        color: lighten($b_color, 10);
+        border-color: lighten($b_color, 10);
+      }
+
+      &:active {
+        color: darken($b_color, 10);
+        border-color: darken($b_color, 10);
+      }
+    }
+  }
+
+  &_blue {
+    @extend .button;
+
+    $b_color: map-get($button-colors, 'blue');
+
+    background-color: $b_color;
+    border-color: $b_color;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($b_color, 10);
+      border-color: lighten($b_color, 10);
+    }
+
+    &:active {
+      background-color: darken($b_color, 10);
+      border-color: darken($b_color, 10);
+    }
+
+    &_invert {
+      @extend .button;
+
+      background-color: #fff;
+      border-color: $b_color;
+      color: $b_color;
+
+      &:hover {
+        color: lighten($b_color, 10);
+        border-color: lighten($b_color, 10);
+      }
+
+      &:active {
+        color: darken($b_color, 10);
+        border-color: darken($b_color, 10);
+      }
+    }
+  }
+}

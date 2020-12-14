@@ -1,0 +1,50 @@
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+$grey-dark: (
+  09: #191919,
+  08: #333,
+  07: #4d4d4d,
+  06: #666,
+  05: #808080,
+  04: #999,
+  03: #b3b3b3,
+  02: #ccc,
+  01: #e6e6e6,
+);
+
+$main_colors: (
+  'body_color': #000,
+  'body_grey': map-get($grey-dark, 04),
+);
+
+$main_info_colors: (
+  'green': rgb(84, 205, 42),
+  'violet': rgb(152, 98, 246),
+  'blue': rgb(50, 109, 245),
+  'orange': rgb(224, 90, 51),
+);
+
+$button-colors: (
+  'orange': rgb(255, 103, 38),
+  'blue': rgb(51, 79, 229),
+);
+
+$main_h2_sizes: (
+  null: (32px, 34px, normal),
+  small: (48px, 52px, -1px),
+  medium: (52px, 60px, -1.5px),
+);
+
+$main_h3_sizes: (
+  null: (24px, 28px, normal),
+  small: (28px, 32px, -0.5px),
+  medium: (30px, 40px, -0.7px),
+);
+
+$main-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.08);
+$main-border-radius: 30px;
+$small-border-radius: 10px;

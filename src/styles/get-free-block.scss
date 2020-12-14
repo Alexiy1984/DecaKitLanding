@@ -1,0 +1,126 @@
+$get-free-margins: (
+  null: (70px, 0, 80px, 0),
+  small: (150px, 0, 160px, 0),
+  medium: (150px, 0, 160px, 0),
+);
+
+$get-free-paddings: (
+  null: (30px),
+  small: (40px),
+  medium: (80px),
+);
+
+$get-free-header-margins: (
+  null: (0 0 40px 0),
+  small: (0 0 45px 0),
+  medium: (0 0 50px 0),
+);
+
+$get-free-block-title-font-sizes: (
+  null: (34px, 34px, normal),
+  small: (52px, 52px, -1px),
+  medium: (60px, 60px, -1.5px),
+);
+
+$get-free-block-subtitle-font-sizes: (
+  null: (18px, 28px, normal),
+  small: (22px, 32px, normal),
+  medium: (24px, 34px, normal),
+);
+
+$get-free-block-title-margins: (
+  null: (0 0 20px 0),
+  small: (0 0 22px 0),
+  medium: (0 0 25px 0),
+);
+
+$get-free-block-subtitle-margins: (
+  null: (0 auto 40px auto),
+  small: (0 auto 45px auto),
+  medium: (0 auto 50px auto),
+);
+
+.get-free-block {
+  @include element-indent($get-free-margins, 'margin');
+  @include element-indent($get-free-paddings, 'padding');
+
+  border-radius: $main-border-radius;
+  box-shadow: $main-box-shadow;
+  background-color: #fff;
+
+  &__header {
+    @include element-indent($get-free-header-margins, 'margin');
+
+    text-align: center;
+
+    div {
+      position: relative;
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      max-width: calc(50% - 5px);
+      max-height: calc(50% - 5px);
+      background-color: #ccc;
+      border-radius: $main-border-radius;
+      margin-left: -4px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      img {
+        position: absolute;
+        width: 45.45%;
+        height: 45.45%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__title {
+    @include font-size($get-free-block-title-font-sizes);
+    @include element-indent($get-free-block-title-margins, 'margin');
+
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    @include font-size($get-free-block-subtitle-font-sizes);
+    @include element-indent($get-free-block-subtitle-margins, 'margin');
+
+    max-width: 594px;
+    text-align: center;
+    font-weight: 400;
+    color: map-get($grey-dark, 06);
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    * {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .get-free-block {
+    &__button-container {
+      * {
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: auto;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
