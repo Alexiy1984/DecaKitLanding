@@ -1,0 +1,144 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Deca Kit
+  link(rel='preload' href='/public/fonts/DMSans-Regular.ttf' as='font' type='font/ttf' crossorigin='anonymous')
+  link(rel='preload' href='/public/fonts/DMSans-Medium.ttf' as='font' type='font/ttf' crossorigin='anonymous')
+  link(rel='preload' href='/public/fonts/DMSans-Bold.ttf' as='font' type='font/ttf' crossorigin='anonymous')
+body
+  include partials/header
+  .container
+    .main-info-block
+      p.subtitle Main Info
+      h2.title Awesome UI Kit For Great Web Sites
+      .flex-inner
+        .flex-inner__item
+          img(src='/public/main-info/Group1.svg' alt='Group1')
+        .flex-inner__item
+          img(src='/public/main-info/Group2.svg' alt='Group2')
+        .flex-inner__item
+          img(src='/public/main-info/Group3.svg' alt='Group3')
+        .flex-inner__item
+          img(src='/public/main-info/Group4.svg' alt='Group4')
+  .container
+    .typography-block
+      p.subtitle All Types
+      h2.title Typography &amp; Color Sets
+      .flex-inner
+        .typography
+          img.typography__front(src='/public/typography/Typography_Title.svg' alt='Typography')
+        .colors
+          picture
+            source(srcset='/public/typography/Colors@2x.png 2x, /public/typography/Colors.png 1x')
+            img(src='/public/typography/Colors.png' alt='img-7')
+  .container__narrow
+    .features-block
+      p.subtitle Highlights
+      h2.title UI Kit Features
+      .flex-inner
+        .flex-inner__item
+          img(src='/public/features/Group1.svg' alt='Group1')
+        .flex-inner__item
+          img(src='/public/features/Group2.svg' alt='Group2')
+        .flex-inner__item
+          img(src='/public/features/Group3.svg' alt='Group3')
+        .flex-inner__item
+          img(src='/public/features/Group4.svg' alt='Group4')
+        .flex-inner__item
+          img(src='/public/features/Group5.svg' alt='Group5')
+        .flex-inner__item
+          img(src='/public/features/Group6.svg' alt='Group6')
+  .container__narrow
+    .get-free-block
+      .get-free-block__header
+        div
+          img(src='/public/get-freee/Figma.svg' alt='Figma')
+        div
+          img(src='/public/get-freee/Sketch.svg' alt='Sketch')
+      h2.get-free-block__title Get Deca UI Kit for Free
+      p.get-free-block__subtitle A powerful design kit with a huge set of customizable elements and templates
+      .get-free-block__button-container
+        a.button_orange(href="#") Download for Free
+        a.button_orange_invert(href="preview.html") Explore Full Preview
+  .sign-up-block
+    .sign-up-block__inner
+      img.sign-up-block__logo(src='/public/logo_white.svg' alt='craftwork')
+      h2.sign-up-block__title Sign up craftwork digest and get new UI releases every tuesday
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate.wow.animate__fadeIn(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.2s' target='_blank' novalidate='novalidate')
+          .mc-field-group.form-group.position-relative
+            input#mce-EMAIL.email.form-control.valid(type='email' value='' name='EMAIL' aria-invalid='false' placeholder='Enter your email')
+            #mce-responses.clear
+              #mce-error-response.response(style='display:none;')
+              #mce-success-response.response(style='display:none;')
+          div(style='position: absolute; left: -5000px;' aria-hidden='true')
+            input(type='text' name='b_1f4eca0391ca7ebd97f795949_69e024e383' tabindex='-1' value='')
+          input#mc-embedded-subscribe.button_blue(type='submit' value='Subscribe' name='subscribe')
+        script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+        p.sign-up-block__bottom No spam. Only releases, updates and discounts
+  .footer
+    .footer__top
+      .footer__info
+        a(href='https://craftwork.design/')
+          img(src='/public/logo_footer.svg' alt='craftwork')
+        |         High-quality digital resources which make your design workflow faster and easier
+      .footer__menu
+        .footer__menu__item
+          .footer__title
+            | Craftwork
+          ul
+            li
+              a.link(href='https://craftwork.design/pro-access/' target='_blank') Pro access
+            li
+              a.link(href='https://craftwork.design/store/' target='_blank') Store
+            li
+              a.link(href='https://craftwork.design/blog/' target='_blank') Blog
+            li
+              a.link(href='https://craftwork.design/login/' target='_blank') Account
+        .footer__menu__item
+          .footer__title
+            | Products
+          ul
+            li
+              a.link(href='https://storytale.io/' target='_blank') Storytale
+            li
+              a.link(href='https://craftwork.design/ui-kits/' target='_blank') UX/UI Systems
+            li
+              a.link(href='https://craftwork.design/templates/' target='_blank') Templates
+            li
+              a.link(href='https://craftwork.design/mockups/' target='_blank') Mockups
+            li
+              a.link(href='https://craftwork.design/freebies/' target='_blank') Freebies
+        .footer__menu__item
+          .footer__title
+            | Company
+          ul
+            li
+              a.link(href='#') News
+            li
+              a.link(href='https://craftwork.design/about-us/' target='_blank') About
+            li
+              a.link(href='https://craftwork.design/license/' target='_blank') License
+            li
+              a.link(href='https://craftwork.design/privacy-policy/' target='_blank') Privacy policy
+            li
+              a.link(href='https://craftwork.design/contacts/' target='_blank') Contact us
+            li
+              a.link(href='https://craftwork.design/help/' target='_blank') Help
+        .footer__menu__item
+          .footer__title
+            | Social
+          ul
+            li
+              a.link(href='https://dribbble.com/Craftwork' target='_blank') Dribbble
+            li
+              a.link(href='https://www.instagram.com/getcraftwork/' target='_blank') Instagram
+            li
+              a.link(href='https://twitter.com/GetCraftwork' target='_blank') Twitter
+            li
+              a.link(href='https://www.behance.net/getcraftwork' target='_blank') Behance
+            li
+              a.link(href='https://www.producthunt.com/@shepovalovdenis/made' target='_blank') Producthunt
+    .footer__bottom
+      | Copyright &copy; 2015-2020 craftwork.design

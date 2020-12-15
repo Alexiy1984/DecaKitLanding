@@ -6,4 +6,27 @@ $notifications-block-margins: (
 
 .notifications-block {
   @include element-indent($notifications-block-margins, 'margin');
+
+  &__item {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 902px) {
+  .notifications-block {
+    &__item {
+      margin: 0 30px 30px 0;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
 }

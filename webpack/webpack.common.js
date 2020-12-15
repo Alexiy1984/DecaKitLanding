@@ -23,7 +23,8 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: Path.resolve(__dirname, '../src/index.html'),
+      template: Path.resolve(__dirname, '../src/index.pug'),
+      inject: true,
     }),
     // new HtmlWebpackPlugin({
     //   filename: 'preview.html',
@@ -34,7 +35,7 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/preview.pug'),
       inject: true,
     }),
-    new HtmlWebpackPugPlugin()
+    new HtmlWebpackPugPlugin(),
   ],
   resolve: {
     alias: {
