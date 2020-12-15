@@ -23,6 +23,10 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',

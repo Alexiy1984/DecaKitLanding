@@ -1,0 +1,9 @@
+$charts-block-margins: (
+  null: (60px, 0),
+  small: (100px, 0),
+  medium: (120px, 0),
+);
+
+.charts-block {
+  @include element-indent($charts-block-margins, 'margin');
+}

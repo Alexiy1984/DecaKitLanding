@@ -50,10 +50,11 @@ $sign-up-block-title-font-sizes: (
 
     position: relative;
     display: inline-flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    width: auto;
+    width: 100%;
 
     * {
       outline: none;
@@ -69,18 +70,25 @@ $sign-up-block-title-font-sizes: (
       }
 
       &[type="email"] {
+        width: calc(100% - 44px);
         min-height: 55px;
         padding: 0 22px;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: -0.7px;
-        margin-right: 15px;
+        margin-bottom: 15px;
 
         &::placeholder {
           color: map-get($grey-dark, 05);
         }
       }
     }
+  }
+
+  &__bottom {
+    font-size: 16px;
+    left: 21px;
+    color: map-get($grey-dark, 06);
   }
 }
 
@@ -91,4 +99,21 @@ $sign-up-block-title-font-sizes: (
   left: 50%;
   transform: translate(-50%, 0);
   width: calc(100% - 30px);
+}
+
+@media (min-width: 768px) {
+  .sign-up-block {
+    form {
+      flex-direction: row;
+      width: auto;
+
+      input {
+        &[type="email"] {
+          width: 345px;
+          margin-right: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
