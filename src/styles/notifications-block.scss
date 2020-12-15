@@ -1,0 +1,9 @@
+$notifications-block-margins: (
+  null: (60px, 0),
+  small: (100px, 0),
+  medium: (120px, 0),
+);
+
+.notifications-block {
+  @include element-indent($notifications-block-margins, 'margin');
+}
