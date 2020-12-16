@@ -1,0 +1,60 @@
+$pricing-cards-block-margins: (
+  null: (60px, 0),
+  small: (100px, 0),
+  medium: (120px, 0),
+);
+
+.pricing-cards-block {
+  @include element-indent($pricing-cards-block-margins, 'margin');
+
+  .flex-inner {
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .pricing-cards-block {
+    .flex-inner {
+      &__item {
+        width: calc(50% - 15px);
+        margin-right: 30px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .pricing-cards-block {
+    .flex-inner {
+      &__item {
+        width: calc(33.33% - 20px);
+        margin-right: 30px;
+
+        &:nth-child(2n) {
+          margin-right: 30px;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

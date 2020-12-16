@@ -1,0 +1,9 @@
+$vertical-cards-block-margins: (
+  null: (60px, 0),
+  small: (100px, 0),
+  medium: (120px, 0),
+);
+
+.vertical-cards-block {
+  @include element-indent($vertical-cards-block-margins, 'margin');
+}

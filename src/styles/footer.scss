@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &__container {
+    box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.035);
+  }
+
   &__top {
     display: flex;
     flex-wrap: wrap;

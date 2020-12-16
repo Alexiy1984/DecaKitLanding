@@ -3,6 +3,33 @@ include partials/head
 body.preview
   include partials/header
   .container
+    .colors-block
+      .preview-title Colors
+      .flex-inner
+        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          .flex-inner__item
+            include partials/picturecolor
+  .container
+    .vertical-cards-block
+      .preview-title Vertical Cards
+      .flex-inner
+        .flex-inner__item
+          
+  .container
+    .pricing-cards-block
+      .preview-title Pricing Cards
+      .flex-inner
+        each val in [1, 2, 3, 4]
+          .flex-inner__item
+            include partials/picturepricingcard
+  .container
+    .dropdowns-block
+      .preview-title Dropdowns
+      .flex-inner
+        each val in [1, 2, 3, 4, 5]
+          .flex-inner__item
+            include partials/picturedropdown
+  .container
     .notifications-block
       .preview-title Notifications
       .flex-inner
@@ -33,5 +60,6 @@ body.preview
             include partials/picture
   .container__narrow
     include partials/get-free-block
-  include partials/footer 
+  .footer__container  
+    include partials/footer 
     
