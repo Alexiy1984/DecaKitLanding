@@ -61,7 +61,7 @@ $get-free-block-subtitle-margins: (
       max-width: calc(50% - 5px);
       max-height: calc(50% - 5px);
       background-color: #ccc;
-      border-radius: $main-border-radius;
+      border-radius: $small-border-radius;
       margin-left: -4px;
 
       &:first-child {

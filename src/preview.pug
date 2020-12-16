@@ -3,6 +3,23 @@ include partials/head
 body.preview
   include partials/header
   .container
+    .buttons-icons-block
+      .flex-inner
+        .flex-inner__item
+          .preview-title Buttons
+          include partials/picturebuttons
+        .flex-inner__item
+          .preview-title Icons
+          include partials/pictureicons
+  .container
+    .popups-block
+      .preview-title Popups
+      .flex-inner
+        - var directory_name = 'popups'
+        each val in [1, 2, 3, 4, 5, 6]
+          .flex-inner__item
+            include partials/picture_generated  
+  .container
     .colors-block
       .preview-title Colors
       .flex-inner
