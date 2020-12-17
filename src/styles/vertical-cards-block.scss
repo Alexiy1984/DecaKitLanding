@@ -6,4 +6,94 @@ $vertical-cards-block-margins: (
 
 .vertical-cards-block {
   @include element-indent($vertical-cards-block-margins, 'margin');
+
+  position: relative;
+
+  .flex-inner {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+
+    .break {
+      flex-basis: 100%;
+      width: 0;
+      margin: 0;
+      content: "";
+      padding: 0;
+      border-width: 0;
+    }
+
+    &__item {
+      width: calc(100%);
+      margin-bottom: 30px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .vertical-cards-block {
+    .flex-inner {
+      height: 2200px;
+
+      &__item {
+        width: calc(50% - 15px);
+        margin-bottom: 0;
+
+        &:nth-of-type(2n+1) { order: 1; }
+        &:nth-of-type(2n+2) { order: 2; }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .vertical-cards-block {
+    .flex-inner {
+      height: 1600px;
+
+      &__item {
+        width: calc(33.33% - 20px);
+
+        &:nth-of-type(3n+1) { order: 1; }
+        &:nth-of-type(3n+2) { order: 2; }
+        &:nth-of-type(3n+3) { order: 3; }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          margin-bottom: 30px;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(6) {
+          margin-bottom: 30px;
+
+          img {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
 }

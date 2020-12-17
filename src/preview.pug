@@ -62,21 +62,24 @@ body.preview
     .progerssbars-horizontalcards-block 
       .flex-inner
         .flex-inner__item
-          .preview-title Checkboxes
+          .preview-title Progress Bars
           - var directory_name= 'progressbars'
           each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
               include partials/picture_generated 
         .flex-inner__item
-          .preview-title Radio Buttons
+          .preview-title Horizontal Cards
           - var directory_name= 'horizontalcards'
           each val in [1, 2, 3, 4, 5, 6, 7, 8]
               include partials/picture_generated            
   .container
     .vertical-cards-block
+      .block-anchor#Vertical
       .preview-title Vertical Cards
       .flex-inner
-        .flex-inner__item
-          
+        - var directory_name= 'verticalcards'
+        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+          .flex-inner__item
+            include partials/picture_generated
   .container
     .pricing-cards-block
       .block-anchor#Pricings
