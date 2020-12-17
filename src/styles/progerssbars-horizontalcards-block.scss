@@ -13,7 +13,17 @@ $progerssbars-horizontalcards-block-margins: (
       width: 100%;
 
       img {
+        display: block;
         max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      picture {
+        &:last-child {
+          img {
+            margin-bottom: 0;
+          }
+        }
       }
 
       &:last-child {
