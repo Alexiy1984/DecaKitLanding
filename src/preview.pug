@@ -3,6 +3,25 @@ include partials/head
 body.preview
   include partials/header
   .container
+    .preview-header-block
+      p.preview-header-block__subtitle Deca UI Kit
+      h1.main-title Full Preview
+      .flex-inner
+        a.preview-header-block__link(href="#Popups") Popups
+        a.preview-header-block__link(href="#Colors") Grids
+        a.preview-header-block__link(href="#Checkboxes") Checkboxes
+        a.preview-header-block__link(href="#Radio") Radio Buttons
+        a.preview-header-block__link(href="#Progress") Progress Bars
+        a.preview-header-block__link(href="#Horizonta") Horizontal Cards
+        a.preview-header-block__link(href="#Toggles") Toggles
+        a.preview-header-block__link(href="#Inputs") Inputs
+        a.preview-header-block__link(href="#Vertical") Vertical Cards
+        a.preview-header-block__link(href="#Pricings") Pricings
+        a.preview-header-block__link(href="#Dropdowns") Dropdowns
+        a.preview-header-block__link(href="#Notifications") Notifications
+        a.preview-header-block__link(href="#Charts") Charts
+        a.preview-header-block__link(href="#Illustrations") Illustrations
+  .container
     .buttons-icons-block
       .flex-inner
         .flex-inner__item
@@ -13,19 +32,32 @@ body.preview
           include partials/pictureicons
   .container
     .popups-block
+      .block-anchor#Popups
       .preview-title Popups
       .flex-inner
-        - var directory_name = 'popups'
+        - var directory_name= 'popups'
         each val in [1, 2, 3, 4, 5, 6]
           .flex-inner__item
             include partials/picture_generated  
   .container
     .colors-block
+      .block-anchor#Colors
       .preview-title Colors
       .flex-inner
         each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
           .flex-inner__item
             include partials/picturecolor
+  .container
+    .checkboxes-radio-block    
+      .flex-inner
+        .flex-inner__item
+          .preview-title Checkboxes
+          - var image_name= 'Checkboxes'
+          include partials/picture_generated_single
+        .flex-inner__item
+          .preview-title Radio Buttons
+          - var image_name= 'RadioButtons'
+          include partials/picture_generated_single      
   .container
     .vertical-cards-block
       .preview-title Vertical Cards
@@ -34,6 +66,7 @@ body.preview
           
   .container
     .pricing-cards-block
+      .block-anchor#Pricings
       .preview-title Pricing Cards
       .flex-inner
         each val in [1, 2, 3, 4]
@@ -41,6 +74,7 @@ body.preview
             include partials/picturepricingcard
   .container
     .dropdowns-block
+      .block-anchor#Dropdowns
       .preview-title Dropdowns
       .flex-inner
         each val in [1, 2, 3, 4, 5]
@@ -48,12 +82,14 @@ body.preview
             include partials/picturedropdown
   .container
     .notifications-block
+      .block-anchor#Notifications
       .preview-title Notifications
       .flex-inner
         each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
           include partials/picturenotifications
   .container
     .charts-block
+      .block-anchor#Charts
       .preview-title Charts
       .flex-inner
         .flex-inner__item
@@ -69,8 +105,9 @@ body.preview
             each val in [9, 10]
               include partials/picturechart_half    
   .container
-    .preview-title Illustrations
     .illustrations-block
+      .block-anchor#Illustrations
+      .preview-title Illustrations
       .flex-inner
         each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
           .flex-inner__item

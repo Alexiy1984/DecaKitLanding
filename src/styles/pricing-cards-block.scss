@@ -7,6 +7,8 @@ $pricing-cards-block-margins: (
 .pricing-cards-block {
   @include element-indent($pricing-cards-block-margins, 'margin');
 
+  position: relative;
+
   .flex-inner {
     &__item {
       width: 100%;

@@ -7,6 +7,8 @@ $notifications-block-margins: (
 .notifications-block {
   @include element-indent($notifications-block-margins, 'margin');
 
+  position: relative;
+
   &__item {
     display: block;
     margin: 0 auto 30px auto;

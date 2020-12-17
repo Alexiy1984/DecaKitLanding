@@ -1,0 +1,42 @@
+$progerssbars-horizontalcards-block-margins: (
+  null: (60px, 0),
+  small: (100px, 0),
+  medium: (120px, 0),
+);
+
+.progerssbars-horizontalcards-block {
+  @include element-indent($progerssbars-horizontalcards-block-margins, 'margin');
+
+  .flex-inner {
+    &__item {
+      position: relative;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+
+      &:last-child {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .progerssbars-horizontalcards-block {
+    .flex-inner {
+      &__item {
+        width: 50%;
+
+        img {
+          max-width: calc(100% - 30px);
+        }
+
+        &:last-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

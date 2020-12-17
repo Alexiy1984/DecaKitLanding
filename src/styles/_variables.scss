@@ -33,6 +33,12 @@ $button-colors: (
   'blue': rgb(51, 79, 229),
 );
 
+$main_h1_sizes: (
+  null: (36px, 40px, normal),
+  small: (68px, 72px, -1.8px),
+  medium: (72px, 80px, -2px),
+);
+
 $main_h2_sizes: (
   null: (32px, 34px, normal),
   small: (48px, 52px, -1px),

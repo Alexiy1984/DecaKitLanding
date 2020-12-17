@@ -7,6 +7,8 @@ $dropdowns-block-margins: (
 .dropdowns-block {
   @include element-indent($dropdowns-block-margins, 'margin');
 
+  position: relative;
+
   .flex-inner {
     align-items: flex-start;
 

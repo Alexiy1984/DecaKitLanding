@@ -7,6 +7,8 @@ $popups-block-margins: (
 .popups-block {
   @include element-indent($popups-block-margins, 'margin');
 
+  position: relative;
+
   .flex-inner {
     display: flex;
     flex-flow: column wrap;

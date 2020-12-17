@@ -26,6 +26,10 @@ $preview-title-margins: (
   medium: (0, 0, 50px, 0),
 );
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: DMSans, sans-serif;
   color: map-get($main_colors, 'body_color');
@@ -39,6 +43,12 @@ body {
   }
 }
 
+h1 {
+  @include font-size($main_h1_sizes);
+
+  font-weight: 700;
+}
+
 h2 {
   @include font-size($main_h2_sizes);
 
@@ -47,6 +57,12 @@ h2 {
 
 h3 {
   @include font-size($main_h3_sizes);
+}
+
+.main-title {
+  @include font-size($main_h1_sizes);
+
+  font-weight: 700;
 }
 
 .title {
@@ -111,13 +127,21 @@ $preview-get-free-margins: (
   .get-free-block {
     @include element-indent($preview-get-free-margins, 'margin');
   }
+
+  .block-anchor {
+    position: absolute;
+    left: 0;
+    top: -50px;
+  }
 }
 
+@import 'preview-header-block';
 @import 'charts-block';
 @import 'notifications-block';
 @import 'dropdowns-block';
 @import 'pricing-cards-block';
 @import 'vertical-cards-block';
 @import 'colors-block';
+@import 'checkboxes-radio-block';
 @import 'popups-block';
 @import 'buttons-icons-block';

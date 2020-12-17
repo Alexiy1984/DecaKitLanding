@@ -7,6 +7,8 @@ $charts-block-margins: (
 .charts-block {
   @include element-indent($charts-block-margins, 'margin');
 
+  position: relative;
+
   .flex-inner {
     &__item {
       width: 100%;
