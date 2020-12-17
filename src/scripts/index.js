@@ -32,5 +32,3 @@ $(window).on('resize load', function() {
     }
   }
 });
-
-// console.log($('.popups-block .flex-inner__item').eq(2).html());

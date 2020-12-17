@@ -45,9 +45,15 @@ $preview-header-block-subtitle-font-sizes: (
     padding: 10px 20px 12px;
     border-radius: $small-border-radius;
     margin: 0 15px 15px 0;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      color: darken(map-get($button-colors, 'orange'), 15);
+      background-color: darken(#fff0e9, 5);
     }
   }
 }

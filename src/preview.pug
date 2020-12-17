@@ -12,7 +12,7 @@ body.preview
         a.preview-header-block__link(href="#Checkboxes") Checkboxes
         a.preview-header-block__link(href="#Radio") Radio Buttons
         a.preview-header-block__link(href="#Progress") Progress Bars
-        a.preview-header-block__link(href="#Horizonta") Horizontal Cards
+        a.preview-header-block__link(href="#Horizontal") Horizontal Cards
         a.preview-header-block__link(href="#Toggles") Toggles
         a.preview-header-block__link(href="#Inputs") Inputs
         a.preview-header-block__link(href="#Vertical") Vertical Cards
@@ -51,10 +51,12 @@ body.preview
     .checkboxes-radio-block    
       .flex-inner
         .flex-inner__item
+          .block-anchor#Checkboxes
           .preview-title Checkboxes
           - var image_name= 'Checkboxes'
           include partials/picture_generated_single
         .flex-inner__item
+          .block-anchor#Radio
           .preview-title Radio Buttons
           - var image_name= 'RadioButtons'
           include partials/picture_generated_single  
@@ -62,15 +64,39 @@ body.preview
     .progerssbars-horizontalcards-block 
       .flex-inner
         .flex-inner__item
+          .block-anchor#Progress
           .preview-title Progress Bars
           - var directory_name= 'progressbars'
           each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
               include partials/picture_generated 
         .flex-inner__item
+          .block-anchor#Horizontal
           .preview-title Horizontal Cards
           - var directory_name= 'horizontalcards'
           each val in [1, 2, 3, 4, 5, 6, 7, 8]
-              include partials/picture_generated            
+              include partials/picture_generated    
+  .container
+    .togglers-inputs-block
+      .flex-inner
+        .flex-inner__item
+          .block-anchor#Toggles
+          .preview-title Toggles
+          - var directory_name= 'toggles'
+          .row
+            each val in [1, 2]
+              include partials/picture_generated 
+          .row
+            each val in [3, 4]
+              include partials/picture_generated 
+          .row
+            each val in [5, 6]
+              include partials/picture_generated         
+        .flex-inner__item
+          .block-anchor#Inputs
+          .preview-title Inputs
+          - var directory_name= 'horizontalcards'
+          each val in [1, 2, 3, 4, 5, 6, 7, 8]
+              include partials/picture_generated                      
   .container
     .vertical-cards-block
       .block-anchor#Vertical
