@@ -94,9 +94,25 @@ body.preview
         .flex-inner__item
           .block-anchor#Inputs
           .preview-title Inputs
-          - var directory_name= 'horizontalcards'
-          each val in [1, 2, 3, 4, 5, 6, 7, 8]
-              include partials/picture_generated                      
+          - var directory_name= 'inputs'
+           .row
+            each val in [1, 2]
+              include partials/picture_generated 
+          .row
+            each val in [3, 4]
+              include partials/picture_generated 
+          .row
+            each val in [5, 6]
+              include partials/picture_generated 
+          .row
+            each val in [7, 8]
+              include partials/picture_generated
+          .row
+            each val in [9, 10]
+              include partials/picture_generated
+          .row
+            each val in [11, 12]
+              include partials/picture_generated    
   .container
     .vertical-cards-block
       .block-anchor#Vertical
