@@ -1,0 +1,9 @@
+$components-short-preview-block: (
+  null: (70px, 0, 80px, 0),
+  small: (150px, 0, 160px, 0),
+  medium: (150px, 0, 160px, 0),
+);
+
+.main-info-block {
+  @include element-indent($components-short-preview-block, 'margin');
+}

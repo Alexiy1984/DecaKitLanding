@@ -5,6 +5,7 @@
   letter-spacing: 3.8px;
   display: flex;
   align-items: center;
+  min-height: 33px;
 
   &__logo {
     flex: 1;
@@ -33,6 +34,18 @@
       text-transform: uppercase;
       color: #fff;
       padding: 0 17px;
+
+      svg {
+        margin-right: 13.25px;
+      }
+
+      .mobile {
+        display: inline-block;
+      }
+
+      .desktop {
+        display: none;
+      }
     }
   }
 
@@ -49,6 +62,22 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__right {
+      a {
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: inline-block;
+        }
       }
     }
   }

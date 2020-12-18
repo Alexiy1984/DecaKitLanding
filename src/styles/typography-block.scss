@@ -63,10 +63,10 @@ $typography-block-margins: (
 
         &__front {
           margin-left: -20.5%;
+        }
 
-          &::after {
-            top: -22.12%;
-          }
+        &::after {
+          top: -22%;
         }
       }
 
