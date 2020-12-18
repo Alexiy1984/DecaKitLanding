@@ -1,7 +1,14 @@
 $index-page-header-block-paddings: (
   null: (70px, 0, 80px, 0),
-  small: (150px, 0, 160px, 0),
+  small: (120px, 0, 130px, 0),
   medium: (150px, 0, 160px, 0),
+);
+
+$index-page-header-main-title-sizes: (
+  null: (36px, 40px, normal),
+  small: (58px, 64px, -1px),
+  medium: (36px, 40px, normal),
+  large: (72px, 80px, -2px),
 );
 
 $index-page-header-subtitle-margins: (
@@ -30,24 +37,35 @@ $index-page-header-subtitle-font-sizes: (
   color: #fff;
   overflow: hidden;
 
+  .main-title {
+    @include font-size($index-page-header-main-title-sizes);
+  }
+
   &__text {
-    width: 55%;
+    width: 100%;
 
     .flex-inner {
       .button_orange {
-        margin-right: 15px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      .button_orange_invert {
+        width: 100%;
       }
     }
   }
 
   &__img {
-    position: absolute;
-    width: auto;
-    bottom: -10px;
-    left: 60%;
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 
     img {
-      width: auto;
+      width: 100%;
     }
   }
 
@@ -83,5 +101,58 @@ $index-page-header-subtitle-font-sizes: (
   &__subtitle {
     @include font-size($index-page-header-subtitle-font-sizes);
     @include element-indent($index-page-header-subtitle-margins, 'margin');
+  }
+}
+
+@media (min-width: 568px) {
+  .index-page-header-block {
+    &__text {
+      width: 100%;
+
+      .flex-inner {
+        .button_orange {
+          margin-right: 15px;
+          margin-bottom: 0;
+          width: auto;
+        }
+
+        .button_orange_invert {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .index-page-header-block {
+    &__text {
+      width: 55%;
+    }
+
+    &__img {
+      margin-top: 0;
+      position: absolute;
+      width: auto;
+      bottom: -15%;
+      left: 60%;
+
+      img {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .index-page-header-block {
+    &__img {
+      bottom: -6.5%;
+      left: 60%;
+
+      img {
+        width: auto;
+      }
+    }
   }
 }
