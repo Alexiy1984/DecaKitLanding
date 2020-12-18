@@ -40,7 +40,35 @@ body
   .container
     .components-short-preview-block
       p.subtitle Components
-      h2.title Short Preview       
+      h2.title Short Preview    
+      .flex-inner  
+        - var directory_name= 'shortpreview'
+        each val in [1, 2]
+          .flex-inner__item 
+            include partials/picture_generated
+        .flex-inner__item
+          .column_1 
+            each val in [3] 
+              include partials/picture_generated_drop_shadow_mb30
+            each val in [6] 
+              include partials/picture_generated  
+          .column_2
+            each val in [4] 
+              include partials/picture_generated_drop_shadow_mb30
+            each val in [7, 9] 
+              include partials/picture_generated 
+          .row  
+            .row__column
+              each val in [10, 13] 
+                include partials/picture_generated 
+            .row__column
+              each val in [11] 
+                include partials/picture_generated     
+        .flex-inner__item
+          each val in [5]
+            include partials/picture_generated_drop_shadow
+          each val in [8, 12, 14] 
+              include partials/picture_generated       
   .container
     .typography-block
       p.subtitle All Types

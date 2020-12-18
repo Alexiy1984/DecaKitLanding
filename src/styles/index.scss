@@ -65,6 +65,26 @@ h3 {
   font-weight: 700;
 }
 
+.drop_shadow {
+  box-shadow: $main-box-shadow;
+}
+
+.main-border-radius {
+  border-radius: $main-border-radius;
+}
+
+.middle-border-radius {
+  border-radius: $middle-border-radius;
+}
+
+.small-border-radius {
+  border-radius: $small-border-radius;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 .title {
   @include font-size($main_h2_sizes);
   @include element-indent($title-margins, 'margin');

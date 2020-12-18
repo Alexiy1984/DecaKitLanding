@@ -4,6 +4,98 @@ $components-short-preview-block: (
   medium: (150px, 0, 160px, 0),
 );
 
-.main-info-block {
+.components-short-preview-block {
   @include element-indent($components-short-preview-block, 'margin');
+
+  .flex-inner {
+    justify-content: flex-start;
+
+    &__item {
+      &:nth-child(1) {
+        width: calc(50% - 15px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          box-shadow: $main-box-shadow;
+          border-radius: 20px;
+        }
+      }
+
+      &:nth-child(2) {
+        width: calc(50% - 15px);
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(4) {
+        width: calc(34% - 15px);
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          margin-bottom: 30px;
+        }
+      }
+
+      &:nth-child(3) {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(66% - 15px);
+        margin-right: 30px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .column_1 {
+          width: calc(37% - 15px);
+          margin-right: 30px;
+        }
+
+        .column_2 {
+          width: calc(63% - 15px);
+
+          picture {
+            &:nth-child(2) {
+              img {
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+
+        .row {
+          margin-top: -30px;
+          display: flex;
+          width: 100%;
+
+          &__column {
+            width: calc(50% - 15px);
+            margin-right: 30px;
+
+            &:first-child {
+              picture:first-child img {
+                margin-bottom: 30px;
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
