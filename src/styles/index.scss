@@ -27,7 +27,7 @@ $preview-title-margins: (
 );
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -108,6 +108,7 @@ h3 {
 }
 
 @import 'header';
+@import 'index-page-header-block';
 @import 'main-info-block';
 @import 'typography-block';
 @import 'features-block';

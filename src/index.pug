@@ -8,6 +8,22 @@ head
   link(rel='preload' href='/public/fonts/DMSans-Bold.ttf' as='font' type='font/ttf' crossorigin='anonymous')
 body
   include partials/header
+  .index-page-header-block
+    .container
+      .index-page-header-block__text
+        .flex-inner.index-page-header-block__icons
+         .index-page-header-block__icon
+           img(src='/public/get-freee/Figma.svg' alt='Figma')
+         .index-page-header-block__icon
+          img(src='/public/get-freee/Sketch.svg' alt='Sketch')
+        h1.main-title Modern Decision for Web Creation with Deca UI Kit
+        p.index-page-header-block__subtitle A powerful design kit with a huge set of customizable elements and templates
+        .flex-inner
+          a(href="#").button_orange Download for Free
+          a(href="#").button_orange_invert Download for Free
+      .index-page-header-block__img  
+        - var image_name= 'HeaderImg'
+        include partials/picture_generated_single
   .container
     .main-info-block
       p.subtitle Main Info
