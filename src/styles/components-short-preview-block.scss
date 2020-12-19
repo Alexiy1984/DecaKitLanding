@@ -7,7 +7,39 @@ $components-short-preview-block: (
 .components-short-preview-block {
   @include element-indent($components-short-preview-block, 'margin');
 
-  .flex-inner {
+  position: relative;
+
+  .left-inner {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 34%;
+    top: 210px;
+    left: calc(-30px - 34%);
+
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:nth-child(1),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: 88%;
+      }
+
+      &:nth-child(2) {
+        width: 75%;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .center-inner {
     justify-content: flex-start;
 
     &__item {
