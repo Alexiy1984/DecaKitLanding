@@ -5,6 +5,13 @@ if (process.env.NODE_ENV === 'development') {
   require('../index.html');
 }
 
+$(function() {
+  $('#nav-icon').click(function(){
+    $(this).toggleClass('open');
+    $('.header__mobile-menu').toggleClass('open');
+	});
+});
+
 $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -34,7 +41,14 @@ $('a[href*="#"]')
     }
   });
 
+$(window).on('scroll', function() {
+  $('.header__mobile-menu').removeClass('open');
+  $('#nav-icon').removeClass('open');
+});
+
 $(window).on('resize load', function() {
+  $('.header__mobile-menu').removeClass('open');
+  $('#nav-icon').removeClass('open');
   if ($(window).outerWidth() < 480) {
     $('.popups-block .flex-inner').height('auto');
     $('.vertical-cards-block .flex-inner').height('auto');
