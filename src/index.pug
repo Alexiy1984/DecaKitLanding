@@ -40,21 +40,7 @@ body
   .container
     .components-short-preview-block
       p.subtitle Components
-      h2.title Short Preview
-      .flex-inner.left-inner  
-        - var directory_name= 'shortpreview'
-        each val in [15, 16]
-          .left-inner__item 
-            include partials/picture_generated_drop_shadow
-        each val in [17]
-          .left-inner__item 
-            include partials/picture_generated 
-        each val in [18]
-          .left-inner__item 
-            include partials/picture_generated_drop_shadow 
-        each val in [19]
-          .left-inner__item 
-            include partials/picture_generated     
+      h2.title Short Preview     
       .flex-inner.center-inner  
         - var directory_name= 'shortpreview'
         each val in [1, 2]
@@ -82,7 +68,27 @@ body
           each val in [5]
             include partials/picture_generated_drop_shadow
           each val in [8, 12, 14] 
-              include partials/picture_generated               
+              include partials/picture_generated
+      .components-short-preview-block__side
+        .flex-inner.left-inner  
+          - var directory_name= 'shortpreview'
+          each val in [15, 16]
+            .left-inner__item 
+              include partials/picture_generated_drop_shadow
+          each val in [17]
+            .left-inner__item 
+              include partials/picture_generated 
+          each val in [18]
+            .left-inner__item 
+              include partials/picture_generated_drop_shadow 
+          each val in [19]
+            .left-inner__item 
+              include partials/picture_generated          
+        .flex-inner.right-inner
+          - var directory_name= 'shortpreview'
+          each val in [20, 21, 22, 23, 24, 25]
+            .right-inner__item 
+              include partials/picture_generated_drop_shadow
   .container
     .typography-block
       p.subtitle All Types

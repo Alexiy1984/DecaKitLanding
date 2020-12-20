@@ -26,16 +26,13 @@ $preview-title-margins: (
   medium: (0, 0, 50px, 0),
 );
 
-html {
-  // scroll-behavior: smooth;
-}
-
 body {
   font-family: DMSans, sans-serif;
   color: map-get($main_colors, 'body_color');
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  overflow-x: hidden;
 
   * {
     margin: 0;
@@ -71,10 +68,6 @@ h3 {
 
 .main-border-radius {
   border-radius: $main-border-radius;
-}
-
-.middle-border-radius {
-  border-radius: $middle-border-radius;
 }
 
 .small-border-radius {
@@ -169,3 +162,13 @@ $preview-get-free-margins: (
 @import 'progerssbars-horizontalcards-block';
 @import 'popups-block';
 @import 'buttons-icons-block';
+
+.middle-border-radius {
+  border-radius: $small-border-radius;
+}
+
+@media (min-width: 480px) {
+  .middle-border-radius {
+    border-radius: $middle-border-radius;
+  }
+}
