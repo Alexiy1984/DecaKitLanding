@@ -17,7 +17,6 @@ $features-block-margins: (
       margin: 0 0 30px 0;
       border-radius: $main-border-radius;
       background-color: #fff;
-      box-shadow: $main-box-shadow;
 
       img {
         position: absolute;
@@ -28,6 +27,12 @@ $features-block-margins: (
 
       &:nth-child(2n) {
         margin-right: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6) {
+        filter: drop-shadow(50px 50px 120px rgba(105, 105, 105, 0.11));
       }
 
       &:last-child {

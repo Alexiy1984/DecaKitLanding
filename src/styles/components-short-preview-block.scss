@@ -68,8 +68,6 @@ $components-short-preview-block: (
           display: block;
           width: 100%;
           height: auto;
-          box-shadow: $main-box-shadow;
-          border-radius: 20px;
         }
       }
 
@@ -80,6 +78,7 @@ $components-short-preview-block: (
         img {
           width: 100%;
           height: auto;
+          filter: drop-shadow(50px 50px 120px rgba(105, 105, 105, 0.11));
         }
       }
 
@@ -202,8 +201,6 @@ $components-short-preview-block: (
             display: block;
             width: 100%;
             height: auto;
-            box-shadow: $main-box-shadow;
-            border-radius: 20px;
           }
         }
 
@@ -387,8 +384,6 @@ $components-short-preview-block: (
             display: block;
             width: 100%;
             height: auto;
-            box-shadow: $main-box-shadow;
-            border-radius: 20px;
           }
         }
 

@@ -23,20 +23,20 @@ body
           a(href="preview.html").button_orange_invert Explore Full Preview
       .index-page-header-block__img  
         - var image_name= 'HeaderImg'
-        include partials/picture_generated_single
+        include partials/picture_generated_single_nolazy
   .container
     .main-info-block
-      p.subtitle Main Info
-      h2.title UI Kit For Web Sites
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0") Main Info
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s") UI Kit For Web Sites
       .flex-inner
-        .flex-inner__item
-          img(src='/public/main-info/Group1.svg' alt='Group1')
-        .flex-inner__item
-          img(src='/public/main-info/Group2.svg' alt='Group2')
-        .flex-inner__item
-          img(src='/public/main-info/Group3.svg' alt='Group3')
-        .flex-inner__item
-          img(src='/public/main-info/Group4.svg' alt='Group4')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+          img.lazy(data-src='/public/main-info/Group1.svg' alt='Group1')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+          img.lazy(data-src='/public/main-info/Group2.svg' alt='Group2')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+          img.lazy(data-src='/public/main-info/Group3.svg' alt='Group3')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
+          img.lazy(data-src='/public/main-info/Group4.svg' alt='Group4')
   .container
     .components-short-preview-block
       p.subtitle Components
@@ -44,7 +44,7 @@ body
       .flex-inner.center-inner  
         - var directory_name= 'shortpreview'
         each val in [1, 2]
-          .center-inner__item 
+          .center-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${val * 0.2}s`) 
             include partials/picture_generated
         .center-inner__item
           .column_1 
@@ -55,8 +55,10 @@ body
           .column_2
             each val in [4] 
               include partials/picture_generated_drop_shadow_mb30
-            each val in [7, 9] 
-              include partials/picture_generated 
+            each val in [7] 
+              include partials/picture_generated
+            each val in [9] 
+              include partials/picture_generated_drop_shadow_mb30   
           .row  
             .row__column
               each val in [10, 13] 
@@ -73,10 +75,10 @@ body
         .flex-inner.left-inner  
           - var directory_name= 'shortpreview'
           each val in [15, 16]
-            .left-inner__item 
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index * 0.2}s`)  
               include partials/picture_generated_drop_shadow
           each val in [17]
-            .left-inner__item 
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index + 1 * 0.2}s`) 
               include partials/picture_generated 
           each val in [18]
             .left-inner__item 
@@ -86,8 +88,8 @@ body
               include partials/picture_generated          
         .flex-inner.right-inner
           - var directory_name= 'shortpreview'
-          each val in [20, 21, 22, 23, 24, 25]
-            .right-inner__item 
+          each val, index in [20, 21, 22, 23, 24, 25]
+            .right-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%2 + 2) * 0.2}s`) 
               include partials/picture_generated_drop_shadow
   .container
     .typography-block
@@ -95,28 +97,28 @@ body
       h2.title Typography &amp; Color Sets
       .flex-inner
         .typography
-          img.typography__front(src='/public/typography/Typography_Title.svg' alt='Typography')
+          img.typography__front.lazy(src='/public/typography/Typography_Title.png' alt='Typography')
         .colors
           picture
-            source(srcset='/public/typography/Colors@2x.png 2x, /public/typography/Colors.png 1x')
-            img(src='/public/typography/Colors.png' alt='img-7')
+            source(data-srcset='/public/typography/Colors@2x.png 2x, /public/typography/Colors.png 1x')
+            img.lazy(data-src='/public/typography/Colors.png' alt='img-7')
   .container__narrow
     .features-block
-      p.subtitle Highlights
-      h2.title UI Kit Features
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Highlights
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s") UI Kit Features
       .flex-inner
-        .flex-inner__item
-          img(src='/public/features/Group1.svg' alt='Group1')
-        .flex-inner__item
-          img(src='/public/features/Group2.svg' alt='Group2')
-        .flex-inner__item
-          img(src='/public/features/Group3.svg' alt='Group3')
-        .flex-inner__item
-          img(src='/public/features/Group4.svg' alt='Group4')
-        .flex-inner__item
-          img(src='/public/features/Group5.svg' alt='Group5')
-        .flex-inner__item
-          img(src='/public/features/Group6.svg' alt='Group6')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+          img.lazy(data-src='/public/features/Group1.svg' alt='Group1')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+          img.lazy(data-src='/public/features/Group2.svg' alt='Group2')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+          img.lazy(data-src='/public/features/Group3.svg' alt='Group3')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.2s")
+          img.lazy(data-src='/public/features/Group4.svg' alt='Group4')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s")
+          img.lazy(data-src='/public/features/Group5.svg' alt='Group5')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
+          img.lazy(data-src='/public/features/Group6.svg' alt='Group6')
   .container__narrow
     .get-free-block
       .get-free-block__header

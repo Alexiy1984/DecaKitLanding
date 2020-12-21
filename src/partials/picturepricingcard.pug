@@ -1,3 +1,3 @@
 picture
-  source(srcset=`/public/pricingcards/Group${val}@2x.png 2x, /public/pricingcards/Group${val}.png 1x`)
-  img(src=`/public/pricingcards/Group${val}.png` alt=`Group${val}`)
+  source(data-srcset=`/public/pricingcards/Group${val}@2x.png 2x, /public/pricingcards/Group${val}.png 1x`)
+  img.lazy(data-src=`/public/pricingcards/Group${val}.png` alt=`Group${val}`)
