@@ -1,0 +1,31 @@
+.card
+  a.card__img(href=card_link target='_blank')
+    img(src=`/public/${img_name}.png`, alt=img_name)
+  .card__row
+    .card__cell_full
+      p.card__title= card_title
+      - var tag_link = '#'
+      - var tag_text = 'Bestseller'
+      - var tag_svg = 'dot'
+      include tag
+      - var tag_class = 'tag_green'
+      - var tag_link = 'https://craftwork.design/pro-access/'
+      - var tag_text = 'Free for Pro'
+      - var tag_svg = 'lightning'
+      include tag
+       - var tag_class = ''
+      p.card__price $48
+  .card__row
+    .card__cell
+      p.card__description= card_description 
+    .card__cell
+      .card__info
+        p.card__prop_name Blocks
+        p= card_blocks
+      .card__info
+        p.card__prop_name Layouts
+        p= card_layouts
+      .card__info
+        p.card__prop_name Compatible with
+        p= card_comp  
+

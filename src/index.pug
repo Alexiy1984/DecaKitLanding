@@ -129,6 +129,30 @@ body
   .container__narrow
     include partials/get-free-block
   .sign-up-block
+    .sign-up-block__inner.sign-up-block__top
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") More Craftwork assets
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") High-quality design products for those who appreciate the time and choose great results.
+    .container.sign-up-block__row
+      .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s") 
+        p Landing Kit
+        - var card_link = 'https://craftwork.design/downloads/singleton/'
+        - var img_name = 'Singleton-shot'
+        - var card_title = 'Singleton'
+        - var card_description = 'Stylish and playful layouts for beautiful adaptive landings'
+        - var card_blocks = '200+'
+        - var card_layouts = 'Desktop, Mobile'
+        - var card_comp = 'Figma, Sketch'
+        include partials/card
+      .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")  
+        p Wireframe Kit
+        - var card_link = 'https://craftwork.design/downloads/method-4/'
+        - var card_title = 'Method'
+        - var img_name = 'Method-shot'
+        - var card_description = 'Find your method of creating great websites for desktops and mobiles'
+        - var card_blocks = '480+'
+        - var card_layouts = 'Desktop, Mobile'
+        - var card_comp = 'Figma, Sketch'
+        include partials/card
     .sign-up-block__inner
       img.sign-up-block__logo.wow.animate__fadeIn(data-wow-duration="1s"  src='/public/logo_white.svg' alt='craftwork')
       h2.sign-up-block__title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Sign up craftwork digest and get new UI releases every tuesday

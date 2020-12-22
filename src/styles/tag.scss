@@ -1,0 +1,52 @@
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 3px 11px 4px 11px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 39px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+
+  span {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  svg {
+    fill: #fff;
+    height: 16px;
+    width: auto;
+    margin-right: 5px;
+    transition: fill 0.15s ease-in;
+
+    &.dot {
+      height: 12px;
+    }
+  }
+
+  &_green {
+    @extend .tag;
+
+    border-color: #bcfe2f;
+    color: #bcfe2f;
+    transition: color 0.15s ease-in, background-color 0.15s ease-in;
+    background-color: rgba(#000, 0);
+
+    svg {
+      fill: #bcfe2f;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: #bcfe2f;
+
+      svg {
+        fill: #000;
+      }
+    }
+  }
+}
