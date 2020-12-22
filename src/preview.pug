@@ -1,61 +1,65 @@
 doctype html
 include partials/head
 body.preview
+  style(type='text/css').
+    .wow {
+      visibility: hidden; 
+    }
   include partials/header
   .container
     .preview-header-block
-      p.preview-header-block__subtitle Deca UI Kit
-      h1.main-title Full Preview
+      p.preview-header-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Deca UI Kit
+      h1.main-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") Full Preview
       .flex-inner
-        a.preview-header-block__link(href="#Popups") Popups
-        a.preview-header-block__link(href="#Colors") Grids
-        a.preview-header-block__link(href="#Checkboxes") Checkboxes
-        a.preview-header-block__link(href="#Radio") Radio Buttons
-        a.preview-header-block__link(href="#Progress") Progress Bars
-        a.preview-header-block__link(href="#Horizontal") Horizontal Cards
-        a.preview-header-block__link(href="#Toggles") Toggles
-        a.preview-header-block__link(href="#Inputs") Inputs
-        a.preview-header-block__link(href="#Vertical") Vertical Cards
-        a.preview-header-block__link(href="#Pricings") Pricings
-        a.preview-header-block__link(href="#Dropdowns") Dropdowns
-        a.preview-header-block__link(href="#Notifications") Notifications
-        a.preview-header-block__link(href="#Charts") Charts
-        a.preview-header-block__link(href="#Illustrations") Illustrations
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.25s" href="#Popups") Popups
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.30s" href="#Colors") Grids
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.35s" href="#Checkboxes") Checkboxes
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.40s" href="#Radio") Radio Buttons
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.45s" href="#Progress") Progress Bars
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.50s" href="#Horizontal") Horizontal Cards
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.55s" href="#Toggles") Toggles
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.25s" href="#Inputs") Inputs
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.30s" href="#Vertical") Vertical Cards
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.35s" href="#Pricings") Pricings
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.40s" href="#Dropdowns") Dropdowns
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.45s" href="#Notifications") Notifications
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.50s" href="#Charts") Charts
+        a.preview-header-block__link.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.55s" href="#Illustrations") Illustrations
   .container
     .buttons-icons-block
       .flex-inner
-        .flex-inner__item
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
           .preview-title Buttons
           include partials/picturebuttons
-        .flex-inner__item
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
           .preview-title Icons
           include partials/pictureicons
   .container
     .popups-block
       .block-anchor#Popups
-      .preview-title Popups
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Popups
       .flex-inner
         - var directory_name= 'popups'
-        each val in [1, 2, 3, 4, 5, 6]
-          .flex-inner__item
+        each val, index in [1, 2, 3, 4, 5, 6]
+          .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%3 * 0.2) + 0.2}s`)
             include partials/picture_generated_nolazy 
   .container
     .colors-block
       .block-anchor#Colors
-      .preview-title Colors
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Colors
       .flex-inner
-        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-          .flex-inner__item
+        each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%5 * 0.2) + 0.2}s`)
             include partials/picturecolor
   .container
     .checkboxes-radio-block    
       .flex-inner
-        .flex-inner__item
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
           .block-anchor#Checkboxes
           .preview-title Checkboxes
           - var image_name= 'Checkboxes'
           include partials/picture_generated_single
-        .flex-inner__item
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
           .block-anchor#Radio
           .preview-title Radio Buttons
           - var image_name= 'RadioButtons'
@@ -65,103 +69,120 @@ body.preview
       .flex-inner
         .flex-inner__item
           .block-anchor#Progress
-          .preview-title Progress Bars
+          .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Progress Bars
           - var directory_name= 'progressbars'
-          each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-              include partials/picture_generated 
+          each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            - var delay= index * 0.1 + 0.2
+            include partials/picture_generated_with-delay
         .flex-inner__item
           .block-anchor#Horizontal
-          .preview-title Horizontal Cards
+          .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Horizontal Cards
           - var directory_name= 'horizontalcards'
-          each val in [1, 2, 3, 4, 5, 6, 7, 8]
-              include partials/picture_generated    
+          each val, index in [1, 2, 3, 4, 5, 6, 7, 8]
+            - var delay= index * 0.1 + 0.2
+            include partials/picture_generated_with-delay   
   .container
     .togglers-inputs-block
       .flex-inner
         .flex-inner__item
           .block-anchor#Toggles
-          .preview-title Toggles
+          .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Toggles
           - var directory_name= 'toggles'
-          .row
+          .row.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
             each val in [1, 2]
               include partials/picture_generated 
-          .row
+          .row.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
             each val in [3, 4]
               include partials/picture_generated 
-          .row
+          .row.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
             each val in [5, 6]
               include partials/picture_generated         
         .flex-inner__item
           .block-anchor#Inputs
-          .preview-title Inputs
+          .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") Inputs
           - var directory_name= 'inputs'
-           .row
-            each val in [1, 2]
-              include partials/picture_generated 
           .row
-            each val in [3, 4]
-              include partials/picture_generated 
+            each val, index in [1, 2]
+              - var delay= (index + 1) * 0.2
+              include partials/picture_generated_with-delay
           .row
-            each val in [5, 6]
-              include partials/picture_generated 
+            each val, index in [3, 4]
+              - var delay= (index + 1) * 0.2 + 0.02
+              include partials/picture_generated_with-delay
           .row
-            each val in [7, 8]
-              include partials/picture_generated
+            each val, index in [5, 6]
+              - var delay= (index + 1) * 0.2 + 0.04
+              include partials/picture_generated_with-delay
           .row
-            each val in [9, 10]
-              include partials/picture_generated
+            each val, index in [7, 8]
+              - var delay= (index + 1) * 0.2 + 0.06
+              include partials/picture_generated_with-delay
           .row
-            each val in [11, 12]
-              include partials/picture_generated    
+            each val, index in [9, 10]
+              - var delay= (index + 1) * 0.2 + 0.08
+              include partials/picture_generated_with-delay
+          .row
+            each val, index in [11, 12]
+              - var delay= (index + 1) * 0.2 + 0.1
+              include partials/picture_generated_with-delay    
   .container
     .vertical-cards-block
       .block-anchor#Vertical
-      .preview-title Vertical Cards
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Vertical Cards
       .flex-inner
         - var directory_name= 'verticalcards'
-        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-          .flex-inner__item
+        each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+          .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%3 * 0.2) + 0.2}s`)
             include partials/picture_generated_nolazy
   .container
     .pricing-cards-block
       .block-anchor#Pricings
-      .preview-title Pricing Cards
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Pricing Cards
       .flex-inner
-        each val in [1, 2, 3, 4]
-          .flex-inner__item
+        each val, index in [1, 2, 3, 4]
+          .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%3 * 0.2) + 0.2}s`)
             include partials/picturepricingcard
   .container
     .dropdowns-block
       .block-anchor#Dropdowns
-      .preview-title Dropdowns
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Dropdowns
       .flex-inner
         each val in [1, 2, 3, 4, 5]
-          .flex-inner__item
+          .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${val * 0.2}s`)
             include partials/picturedropdown
   .container
     .notifications-block
       .block-anchor#Notifications
-      .preview-title Notifications
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Notifications
       .flex-inner
-        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-          include partials/picturenotifications
+        - var directory_name= 'notifications'
+        - var add_class='notifications-block__item'
+        each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+          - var delay= index%4 * 0.2 + 0.2
+          include partials/picture_generated_with-delay_with-addclass
   .container
     .charts-block
       .block-anchor#Charts
-      .preview-title Charts
+      .preview-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Charts
       .flex-inner
         .flex-inner__item
-          each val in [1, 3, 5, 8]
-            include partials/picturechart_full
+          - var directory_name= 'charts'
+          - var add_class='fullchart'
+          each val, index in [1, 3, 5, 8]
+            - var delay= 0.2 + parseInt(index)%2 * 0.2
+            include partials/picture_generated_with-delay_with-addclass
         .flex-inner__item 
-          each val in [2, 4]
-            include partials/picturechart_full
+          each val, index in [2, 4]
+            - var delay= 0.3 + parseInt(index)%2 * 0.2
+            include partials/picture_generated_with-delay_with-addclass
           .halfchart  
-            each val in [6, 7]
-              include partials/picturechart_half
-          .halfchart  
-            each val in [9, 10]
-              include partials/picturechart_half    
+            each val, index in [6, 7]
+              - var delay= 0.3 + parseInt(index)%2 * 0.1
+              include partials/picture_generated_with-delay
+          .halfchart
+            each val, index in [9, 10]
+              - var delay= 0.4 + parseInt(index)%2 * 0.1
+              include partials/picture_generated_with-delay    
   .container
     .illustrations-block
       .block-anchor#Illustrations

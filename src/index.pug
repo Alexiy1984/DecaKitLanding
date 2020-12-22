@@ -1,32 +1,30 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  title Deca Kit
-  link(rel='preload' href='/public/fonts/DMSans-Regular.ttf' as='font' type='font/ttf' crossorigin='anonymous')
-  link(rel='preload' href='/public/fonts/DMSans-Medium.ttf' as='font' type='font/ttf' crossorigin='anonymous')
-  link(rel='preload' href='/public/fonts/DMSans-Bold.ttf' as='font' type='font/ttf' crossorigin='anonymous')
+include partials/head
 body
+  style(type='text/css').
+    .wow {
+      visibility: hidden; 
+    }
   include partials/header
   .index-page-header-block
     .container
       .index-page-header-block__text
-        .flex-inner.index-page-header-block__icons
+        .flex-inner.index-page-header-block__icons.wow.animate__fadeIn(data-wow-duration="1s")
          .index-page-header-block__icon
            img(src='/public/get-freee/Figma.svg' alt='Figma')
          .index-page-header-block__icon
           img(src='/public/get-freee/Sketch.svg' alt='Sketch')
-        h1.main-title Modern Decision for Web Creation with Deca UI Kit
-        p.index-page-header-block__subtitle A powerful design kit with a huge set of customizable elements and templates
+        h1.main-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.3s") Modern Decision for Web Creation with Deca UI Kit
+        p.index-page-header-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") A powerful design kit with a huge set of customizable elements and templates
         .flex-inner
-          a(href="#").button_orange Download for Free
-          a(href="preview.html").button_orange_invert Explore Full Preview
-      .index-page-header-block__img  
+          a.button_orange.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.9s" href="#") Download for Free
+          a.button_orange_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.2s" href="preview.html") Explore Full Preview
+      .index-page-header-block__img.wow.animate__fadeIn(data-wow-duration="2.5s")  
         - var image_name= 'HeaderImg'
         include partials/picture_generated_single_nolazy
   .container
     .main-info-block
-      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0") Main Info
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Main Info
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s") UI Kit For Web Sites
       .flex-inner
         .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
@@ -39,66 +37,75 @@ body
           img.lazy(data-src='/public/main-info/Group4.svg' alt='Group4')
   .container
     .components-short-preview-block
-      p.subtitle Components
-      h2.title Short Preview     
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" ) Components
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Short Preview     
       .flex-inner.center-inner  
         - var directory_name= 'shortpreview'
         each val in [1, 2]
-          .center-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${val * 0.2}s`) 
+          .center-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${val * 0.2}s` style=`z-index: ${9 + val};`) 
             include partials/picture_generated
         .center-inner__item
           .column_1 
             each val in [3] 
-              include partials/picture_generated_drop_shadow_mb30
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+                include partials/picture_generated_drop_shadow_mb30
             each val in [6] 
-              include partials/picture_generated  
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+                include partials/picture_generated  
           .column_2
             each val in [4] 
-              include partials/picture_generated_drop_shadow_mb30
+              div.mb-30.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated_drop_shadow
             each val in [7] 
-              include partials/picture_generated
+              div.mb-30.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated
             each val in [9] 
-              include partials/picture_generated_drop_shadow_mb30   
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated_drop_shadow   
           .row  
             .row__column
-              each val in [10, 13] 
-                include partials/picture_generated 
+              each val in [10, 13]
+                div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s') 
+                  include partials/picture_generated 
             .row__column
               each val in [11] 
-                include partials/picture_generated     
+                div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s') 
+                  include partials/picture_generated     
         .center-inner__item
           each val in [5]
-            include partials/picture_generated_drop_shadow
-          each val in [8, 12, 14] 
+            div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s')
+              include partials/picture_generated_drop_shadow
+          each val in [8, 12, 14]
+            div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s') 
               include partials/picture_generated
       .components-short-preview-block__side
         .flex-inner.left-inner  
           - var directory_name= 'shortpreview'
-          each val in [15, 16]
+          each val, index in [15, 16]
             .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index * 0.2}s`)  
               include partials/picture_generated_drop_shadow
-          each val in [17]
+          each val, index in [17]
             .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index + 1 * 0.2}s`) 
               include partials/picture_generated 
           each val in [18]
-            .left-inner__item 
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
               include partials/picture_generated_drop_shadow 
           each val in [19]
-            .left-inner__item 
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
               include partials/picture_generated          
         .flex-inner.right-inner
           - var directory_name= 'shortpreview'
           each val, index in [20, 21, 22, 23, 24, 25]
-            .right-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%2 + 2) * 0.2}s`) 
+            .right-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%2) * 0.2 + 0.2}s`) 
               include partials/picture_generated_drop_shadow
   .container
     .typography-block
-      p.subtitle All Types
-      h2.title Typography &amp; Color Sets
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s') All Types
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s') Typography &amp; Color Sets
       .flex-inner
-        .typography
+        .typography.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s')
           img.typography__front.lazy(src='/public/typography/Typography_Title.png' alt='Typography')
-        .colors
+        .colors.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.8s')
           picture
             source(data-srcset='/public/typography/Colors@2x.png 2x, /public/typography/Colors.png 1x')
             img.lazy(data-src='/public/typography/Colors.png' alt='img-7')
@@ -120,23 +127,13 @@ body
         .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
           img.lazy(data-src='/public/features/Group6.svg' alt='Group6')
   .container__narrow
-    .get-free-block
-      .get-free-block__header
-        div
-          img(src='/public/get-freee/Figma.svg' alt='Figma')
-        div
-          img(src='/public/get-freee/Sketch.svg' alt='Sketch')
-      h2.get-free-block__title Get Deca UI Kit for Free
-      p.get-free-block__subtitle A powerful design kit with a huge set of customizable elements and templates
-      .get-free-block__button-container
-        a.button_orange(href="#") Download for Free
-        a.button_orange_invert(href="preview.html") Explore Full Preview
+    include partials/get-free-block
   .sign-up-block
     .sign-up-block__inner
-      img.sign-up-block__logo(src='/public/logo_white.svg' alt='craftwork')
-      h2.sign-up-block__title Sign up craftwork digest and get new UI releases every tuesday
+      img.sign-up-block__logo.wow.animate__fadeIn(data-wow-duration="1s"  src='/public/logo_white.svg' alt='craftwork')
+      h2.sign-up-block__title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Sign up craftwork digest and get new UI releases every tuesday
       #mc_embed_signup
-        form#mc-embedded-subscribe-form.validate.wow.animate__fadeIn(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.2s' target='_blank' novalidate='novalidate')
+        form#mc-embedded-subscribe-form.validate.wow.animate__fadeIn(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.4s' target='_blank' novalidate='novalidate')
           .mc-field-group.form-group.position-relative
             input#mce-EMAIL.email.form-control.valid(type='email' value='' name='EMAIL' aria-invalid='false' placeholder='Enter your email')
             #mce-responses.clear
@@ -146,6 +143,6 @@ body
             input(type='text' name='b_1f4eca0391ca7ebd97f795949_69e024e383' tabindex='-1' value='')
           input#mc-embedded-subscribe.button_blue(type='submit' value='Subscribe' name='subscribe')
         script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
-        p.sign-up-block__bottom No spam. Only releases, updates and discounts
+        p.sign-up-block__bottom.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") No spam. Only releases, updates and discounts
   .footer__container
     include partials/footer

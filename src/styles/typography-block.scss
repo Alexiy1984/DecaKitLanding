@@ -15,11 +15,11 @@ $typography-block-margins: (
       position: relative;
       flex: 1;
       margin: 22.12% 0 40px 20.5%;
-      filter: drop-shadow(50px 50px 120px rgba(105, 105, 105, 0.11));
 
       img {
         width: 100%;
         height: auto;
+        box-shadow: 50px 50px 120px rgba(105, 105, 105, 0.11);
       }
 
       &__front {
@@ -45,7 +45,6 @@ $typography-block-margins: (
       position: relative;
       width: 100%;
       height: auto;
-      filter: drop-shadow(50px 50px 120px rgba(105, 105, 105, 0.11));
 
       img {
         position: relative;

@@ -16,8 +16,7 @@ $main-info-block-margins: (
       padding-bottom: 93%;
       border-radius: $main-border-radius;
       margin-bottom: 26px;
-      // box-shadow: $main-box-shadow;
-      filter: drop-shadow(25px 25px 60px rgba(105, 105, 105, 0.11));
+      box-shadow: 50px 50px 120px rgba(105, 105, 105, 0.11);
 
       img {
         position: absolute;
