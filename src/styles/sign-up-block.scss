@@ -101,6 +101,31 @@ $sign-up-block-title-font-sizes: (
   width: calc(100% - 30px);
 }
 
+.mc-field-group {
+  #mce-responses {
+    .response {
+      position: absolute;
+      display: block;
+      top: calc(100% + 15px);
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: calc(100% - 30px);
+      padding: 10px 15px;
+      background-color: #fff;
+      color: #000;
+      border-radius: $small-border-radius;
+
+      &#mce-error-response {
+        color: rgb(190, 26, 26);
+      }
+
+      &#mce-success-response {
+        color: rgb(14, 90, 14);
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .sign-up-block {
     form {
