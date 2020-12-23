@@ -88,4 +88,80 @@
       }
     }
   }
+
+  &_black {
+    @extend .button;
+
+    $b_color: #000;
+
+    background-color: $b_color;
+    border-color: $b_color;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($b_color, 30);
+      border-color: lighten($b_color, 30);
+    }
+
+    &:active {
+      background-color: lighten($b_color, 40);
+      border-color: lighten($b_color, 40);
+    }
+
+    &_invert {
+      @extend .button;
+
+      background-color: none;
+      border-color: $b_color;
+      color: $b_color;
+
+      &:hover {
+        color: lighten($b_color, 30);
+        border-color: lighten($b_color, 30);
+      }
+
+      &:active {
+        color: lighten($b_color, 40);
+        border-color: lighten($b_color, 40);
+      }
+    }
+  }
+
+  &_white {
+    @extend .button;
+
+    $b_color: #fff;
+
+    background-color: $b_color;
+    border-color: $b_color;
+    color: #000;
+
+    &:hover {
+      background-color: darken($b_color, 10);
+      border-color: darken($b_color, 10);
+    }
+
+    &:active {
+      background-color: darken($b_color, 10);
+      border-color: darken($b_color, 10);
+    }
+
+    &_invert {
+      @extend .button;
+
+      background-color: none;
+      border-color: $b_color;
+      color: $b_color;
+
+      &:hover {
+        color: darken($b_color, 10);
+        border-color: darken($b_color, 10);
+      }
+
+      &:active {
+        color: darken($b_color, 10);
+        border-color: darken($b_color, 10);
+      }
+    }
+  }
 }

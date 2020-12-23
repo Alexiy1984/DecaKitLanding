@@ -1,18 +1,18 @@
 $explore-deca-bloc-margins: (
-  null: (80px, 0, 100px, 0),
+  null: (60px, 0, 50px, 0),
   small: (100px, 0, 120px, 0),
   medium: (118px, 0, 134px, 0),
 );
 
 .explore-deca-block {
+  @include element-indent($explore-deca-bloc-margins, 'margin');
+
   &__heading {
     max-width: 694px;
     margin: 0 auto;
   }
 
   .flex-inner {
-    @include element-indent($explore-deca-bloc-margins, 'margin');
-
     justify-content: center;
 
     &__item {

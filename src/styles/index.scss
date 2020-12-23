@@ -129,6 +129,7 @@ h3 {
 @import 'explore-deca-block';
 @import 'discover-components-block';
 @import 'tm-logos-block';
+@import 'ready-to-go-block';
 // Old blocks
 @import 'index-page-header-block';
 @import 'components-short-preview-block';
@@ -161,18 +162,18 @@ $preview-get-free-margins: (
   }
 }
 
-@import 'preview-header-block';
-@import 'charts-block';
-@import 'notifications-block';
-@import 'dropdowns-block';
-@import 'pricing-cards-block';
-@import 'togglers-inputs-block';
-@import 'vertical-cards-block';
-@import 'colors-block';
-@import 'checkboxes-radio-block';
-@import 'progerssbars-horizontalcards-block';
-@import 'popups-block';
-@import 'buttons-icons-block';
+// @import 'preview-header-block';
+// @import 'charts-block';
+// @import 'notifications-block';
+// @import 'dropdowns-block';
+// @import 'pricing-cards-block';
+// @import 'togglers-inputs-block';
+// @import 'vertical-cards-block';
+// @import 'colors-block';
+// @import 'checkboxes-radio-block';
+// @import 'progerssbars-horizontalcards-block';
+// @import 'popups-block';
+// @import 'buttons-icons-block';
 
 .middle-border-radius {
   border-radius: $small-border-radius;

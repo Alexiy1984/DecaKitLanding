@@ -4,10 +4,22 @@ $hero-block-main-title-margins: (
   medium: (55px, auto, 38px, auto),
 );
 
+$hero-block-subtitle-margins: (
+  null: (0, auto, 36px, auto),
+  small: (0, auto, 48px, auto),
+  medium: (0, auto, 58px, auto),
+);
+
 $hero-block-paddings: (
   null: (60px, 0, 0, 0),
   small: (70px, 0, 0, 0),
   medium: (80px, 0, 0, 0),
+);
+
+$hero-block-subtitle-font-sizes: (
+  null: (18px, 28px, normal),
+  small: (22px, 32px, normal),
+  medium: (24px, 34px, normal),
 );
 
 .hero-block {
@@ -15,16 +27,24 @@ $hero-block-paddings: (
 
   position: relative;
   background-color: #000;
-  margin-bottom: 8%;
+  margin-bottom: 12.5%;
   z-index: 11;
   color: #fff;
 
-  .main-title {
+  &__maintitle {
     @include element-indent($hero-block-main-title-margins, 'margin');
 
     max-width: 1030px;
-    margin: auto;
     text-align: center;
+  }
+
+  &__subtitle {
+    @include font-size($hero-block-subtitle-font-sizes);
+    @include element-indent($hero-block-subtitle-margins, 'margin');
+
+    text-align: center;
+    color: map-get($grey-dark, 06);
+    max-width: 445px;
   }
 
   .inner {
@@ -32,12 +52,30 @@ $hero-block-paddings: (
     margin: auto;
   }
 
+  &__button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    & > * {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   &__img {
     position: relative;
-    width: 94%;
+    width: 120%;
     height: 0;
-    padding-bottom: 55%;
-    margin: -15% auto 0;
+    padding-bottom: 80%;
+    margin: -25% 0 0 -7.5%;
+    z-index: 10;
 
     img {
       position: absolute;
@@ -45,20 +83,33 @@ $hero-block-paddings: (
       height: 100%;
       object-fit: cover;
       bottom: -20%;
-      // box-shadow: 33.625px 33.625px 80.7px rgba(3, 16, 83, 0.2);
-      // transform: matrix(0.81, 0.22, -0.94, 0.94, 0, 0);
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-block {
+    margin-bottom: 8%;
+
+    &__button-container {
+      & > * {
+        width: auto;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
-    // &::after {
-    //   position: absolute;
-    //   display: block;
-    //   content: '';
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   box-shadow: 33.625px 33.625px 80.7px rgba(3, 16, 83, 0.2);
-    //   transform: matrix(0.81, 0.22, -0.94, 0.94, 0, 0);
-    // }
+    &__img {
+      width: 94%;
+      padding-bottom: 55%;
+      margin: -15% auto 0;
+
+      img {
+        bottom: -20%;
+      }
+    }
   }
 }

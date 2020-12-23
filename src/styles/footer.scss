@@ -110,11 +110,15 @@
   .footer {
     &__menu {
       &__item {
-        width: auto;
+        width: calc(20% - 26.25px);
         margin-bottom: 0;
 
         &:nth-child(2n) {
           margin-right: 35px;
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
@@ -131,10 +135,6 @@
       width: 75%;
       justify-content: flex-end;
       margin-top: 0;
-
-      &__item {
-        width: auto;
-      }
     }
   }
 }
@@ -143,6 +143,19 @@
   .footer {
     &__menu {
       width: 50%;
+
+      &__item {
+        width: calc(25% - 26.25px);
+        margin-bottom: 0;
+
+        &:nth-child(2n) {
+          margin-right: 35px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

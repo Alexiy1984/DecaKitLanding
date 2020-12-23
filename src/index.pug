@@ -8,18 +8,26 @@ body
   include partials/header
   .hero-block
     .container
-      include partials/tm-logos-block
-      h1.main-title Free UI kit for easiest design experience
+      div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+        include partials/tm-logos-block
+      h1.hero-block__maintitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") Free UI kit for easiest design experience
+      p.hero-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") Clean and clear UI Kit with all necessary stuff to create design projects
+      .hero-block__button-container
+        a.button_white.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="#") Download for Free
+        a.button_white_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
     .inner 
-      .hero-block__img
+      .hero-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.2s")
         - var image_name= 'HeroImg'
         include partials/picture_generated_single_nolazy
   .discover-components-block
-    .discover-components-block__heading
-      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Start best design experience with useful kit
-      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Discover big library of 150+ components and save your time dealing with charts, popups, buttons and dropdowns
-    .discover-components-block__img
-      img.lazy(data-src='/public/DiscovercompsImg.svg', alt="Components")     
+    .container
+      .discover-components-block__heading
+        p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Start best design experience with useful kit
+        h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Discover big library of 150+ components and save your time dealing with charts, popups, buttons and dropdowns
+    .discover-components-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+      - var image_name= 'DiscoverCompsImg'
+      include partials/picture_generated_single
+      //- img.lazy(data-src='/public/DiscoverCompsImg.svg', alt="Components")     
   .explore-deca-block
     .container
       .explore-deca-block__heading
@@ -46,17 +54,49 @@ body
     .colors-styles-block__heading
       p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Setup styles up to your personal taste
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Easy customization is available by mixing colors and font styles for the best result
-    .colors-styles-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") 
-      - var image_name= 'ColorsStylesImg'
-      include partials/picture_generated_single            
+    .colors-styles-block__img-container.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")      
+      - var directory_name= 'colorsstyles'
+        each val in [1, 2, 3, 4, 5, 6, 7]
+          case val
+            when 1
+              - var delay = 0.4
+            when 2
+              - var delay = 0.9
+            when 3
+              - var delay = 0.5
+            when 4
+              - var delay = 1
+            when 5
+              - var delay = 0.6  
+            when 5
+              - var delay = 0.7  
+            when 5
+              - var delay = 0.8  
+            default
+              - var delay = 0.4
+          div(class=`wow animate__fadeIn item item__${val}`)(data-wow-duration="1s" data-wow-delay=`${delay}s`) 
+            include partials/picture_generated   
   .have-fun-block
     .have-fun-block__heading
       p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Full-fledged illustration constructor included
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") 
         | Have fun with 20 scenes from #[a(href="https://stubborn.fun/") Stubborn Generator] to make your design perfect
-    .have-fun-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+    .have-fun-block__button-container
+      a.button_blue.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s" href="#") Get full pack
+      a.button_blue_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
+    .have-fun-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
       - var image_name= 'HaveFunImg'
       include partials/picture_generated_single 
+  .ready-to-go-block
+    div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+      - var light = true
+      include partials/tm-logos-block
+    h1.ready-to-go-block__maintitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") Ready to go? Download Deca UI Kit for free
+    .container
+      p.ready-to-go-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") Clean and clear UI Kit with all necessary stuff to create design projects
+      .ready-to-go-block__button-container
+        a.button_black.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="#") Download for Free
+        a.button_black_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
   .sign-up-block
     .sign-up-block__inner.sign-up-block__top
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") More Craftwork assets

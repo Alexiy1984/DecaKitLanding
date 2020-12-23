@@ -1,0 +1,59 @@
+$ready-to-go-block-buttons-block-margins: (
+  null: (0, 0, 60px, 0),
+  small: (0, 0, 80px, 0),
+  medium: (0, 0, 95px, 0),
+);
+
+.ready-to-go-block {
+  &__maintitle {
+    @include element-indent($hero-block-main-title-margins, 'margin');
+
+    max-width: 1166px;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include font-size($hero-block-subtitle-font-sizes);
+    @include element-indent($hero-block-subtitle-margins, 'margin');
+
+    text-align: center;
+    color: map-get($grey-dark, 06);
+    max-width: 445px;
+  }
+
+  &__button-container {
+    @include element-indent($ready-to-go-block-buttons-block-margins, 'margin');
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    & > * {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .ready-to-go-block {
+    &__button-container {
+      & > * {
+        width: auto;
+        margin-right: 15px;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

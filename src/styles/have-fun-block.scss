@@ -1,6 +1,13 @@
+$have-fun-block-margins: (
+  null: (68px, auto, 50px, auto),
+  small: (68px, auto, 0, auto),
+  medium: (68px, auto, 0, auto),
+);
+
 .have-fun-block {
+  @include element-indent($have-fun-block-margins, 'margin');
+
   max-width: 1600px;
-  margin: auto;
   padding: 0 30px;
 
   &__heading {
@@ -19,12 +26,57 @@
   }
 
   &__img {
-    width: 120%;
-    margin-left: -15%;
+    width: calc(110% + 60px);
+    margin-left: calc(-5% - 30px);
     height: auto;
 
     img {
       width: 100%;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    & > * {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .have-fun-block {
+    &__button-container {
+      & > * {
+        width: auto;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .have-fun-block {
+    &__img {
+      width: 120%;
+      margin-left: -15%;
+
+      img {
+        margin-top: -4%;
+      }
     }
   }
 }
