@@ -4,9 +4,9 @@
 @import "~animate.css/animate.css";
 
 $title-margins: (
-  null: (0, 0, 40px, 0),
-  small: (0, 0, 60px, 0),
-  medium: (0, 0, 80px, 0),
+  null: (0, 0, 35px, 0),
+  small: (0, 0, 45px, 0),
+  medium: (0, 0, 55px, 0),
 );
 
 $subtitle-margins: (
@@ -85,11 +85,11 @@ h3 {
 
   font-weight: 700;
   text-align: center;
-  margin-bottom: 80px;
 }
 
 .subtitle {
-  @include font-size($main_h3_sizes);
+  // @include font-size($main_h3_sizes);
+  @include font-size($main_h4_sizes);
   @include element-indent($subtitle-margins, 'margin');
 
   color: map-get($main_colors, 'body_grey');
@@ -123,6 +123,13 @@ h3 {
 
 @import 'nav-icon';
 @import 'header';
+@import 'hero-block';
+@import 'have-fun-block';
+@import 'colors-styles-block';
+@import 'explore-deca-block';
+@import 'discover-components-block';
+@import 'tm-logos-block';
+// Old blocks
 @import 'index-page-header-block';
 @import 'components-short-preview-block';
 @import 'main-info-block';

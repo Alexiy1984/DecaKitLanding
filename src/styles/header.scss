@@ -12,10 +12,13 @@
   &__logo {
     text-align: left;
     margin: 9px 0 9px 25px;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -2px;
 
-    a,
-    img {
-      display: block;
+    a {
+      color: #fff;
+      text-decoration: none;
     }
   }
 

@@ -1,6 +1,6 @@
 .card
   a.card__img(href=card_link target='_blank')
-    img(src=`/public/${img_name}.png`, alt=img_name)
+    img.lazy(data-src=`/public/${img_name}.png`, alt=img_name)
   .card__row
     .card__cell_full
       p.card__title= card_title

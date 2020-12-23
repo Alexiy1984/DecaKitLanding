@@ -1,0 +1,161 @@
+doctype html
+include partials/head
+body
+  style(type='text/css').
+    .wow {
+      visibility: hidden; 
+    }
+  include partials/header
+  .hero-block
+    .hero-block__img
+      - var image_name= 'HeroImg'
+      include partials/picture_generated_single
+  .container
+    .main-info-block
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Main Info
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s") UI Kit For Web Sites
+      .flex-inner
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+          img.lazy(data-src='/public/main-info/Group1.svg' alt='Group1')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+          img.lazy(data-src='/public/main-info/Group2.svg' alt='Group2')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+          img.lazy(data-src='/public/main-info/Group3.svg' alt='Group3')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
+          img.lazy(data-src='/public/main-info/Group4.svg' alt='Group4')
+  .container
+    .components-short-preview-block
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" ) Components
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Short Preview     
+      .flex-inner.center-inner  
+        - var directory_name= 'shortpreview'
+        each val in [1, 2]
+          .center-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${val * 0.2}s` style=`z-index: ${9 + val};`) 
+            include partials/picture_generated
+        .center-inner__item
+          .column_1 
+            each val in [3] 
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+                include partials/picture_generated_drop_shadow_mb30
+            each val in [6] 
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+                include partials/picture_generated  
+          .column_2
+            each val in [4] 
+              div.mb-30.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated_drop_shadow
+            each val in [7] 
+              div.mb-30.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated
+            each val in [9] 
+              div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s')
+                include partials/picture_generated_drop_shadow   
+          .row  
+            .row__column
+              each val in [10, 13]
+                div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s') 
+                  include partials/picture_generated 
+            .row__column
+              each val in [11] 
+                div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s') 
+                  include partials/picture_generated     
+        .center-inner__item
+          each val in [5]
+            div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s')
+              include partials/picture_generated_drop_shadow
+          each val in [8, 12, 14]
+            div.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s') 
+              include partials/picture_generated
+      .components-short-preview-block__side
+        .flex-inner.left-inner  
+          - var directory_name= 'shortpreview'
+          each val, index in [15, 16]
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index * 0.2}s`)  
+              include partials/picture_generated_drop_shadow
+          each val, index in [17]
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${index + 1 * 0.2}s`) 
+              include partials/picture_generated 
+          each val in [18]
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+              include partials/picture_generated_drop_shadow 
+          each val in [19]
+            .left-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s')  
+              include partials/picture_generated          
+        .flex-inner.right-inner
+          - var directory_name= 'shortpreview'
+          each val, index in [20, 21, 22, 23, 24, 25]
+            .right-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay=`${(index%2) * 0.2 + 0.2}s`) 
+              include partials/picture_generated_drop_shadow
+  .container
+    .typography-block
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.2s') All Types
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.4s') Typography &amp; Color Sets
+      .flex-inner
+        .typography.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.6s')
+          img.typography__front.lazy(src='/public/typography/Typography_Title.png' alt='Typography')
+        .colors.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay='0.8s')
+          picture
+            source(data-srcset='/public/typography/Colors@2x.png 2x, /public/typography/Colors.png 1x')
+            img.lazy(data-src='/public/typography/Colors.png' alt='img-7')
+  .container__narrow
+    .features-block
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s") Highlights
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s") UI Kit Features
+      .flex-inner
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+          img.lazy(data-src='/public/features/Group1.svg' alt='Group1')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+          img.lazy(data-src='/public/features/Group2.svg' alt='Group2')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+          img.lazy(data-src='/public/features/Group3.svg' alt='Group3')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.2s")
+          img.lazy(data-src='/public/features/Group4.svg' alt='Group4')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s")
+          img.lazy(data-src='/public/features/Group5.svg' alt='Group5')
+        .flex-inner__item.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
+          img.lazy(data-src='/public/features/Group6.svg' alt='Group6')
+  .container__narrow
+    include partials/get-free-block
+  .sign-up-block
+    .sign-up-block__inner.sign-up-block__top
+      h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") More Craftwork assets
+      p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") High-quality design products for those who appreciate the time and choose great results.
+    .container.sign-up-block__row
+      .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s") 
+        p Landing Kit
+        - var card_link = 'https://craftwork.design/downloads/singleton/'
+        - var img_name = 'Singleton-shot'
+        - var card_title = 'Singleton'
+        - var card_description = 'Stylish and playful layouts for beautiful adaptive landings'
+        - var card_blocks = '200+'
+        - var card_layouts = 'Desktop, Mobile'
+        - var card_comp = 'Figma, Sketch'
+        include partials/card
+      .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")  
+        p Wireframe Kit
+        - var card_link = 'https://craftwork.design/downloads/method-4/'
+        - var card_title = 'Method'
+        - var img_name = 'Method-shot'
+        - var card_description = 'Find your method of creating great websites for desktops and mobiles'
+        - var card_blocks = '480+'
+        - var card_layouts = 'Desktop, Mobile'
+        - var card_comp = 'Figma, Sketch'
+        include partials/card
+    .sign-up-block__inner
+      img.sign-up-block__logo.wow.animate__fadeIn(data-wow-duration="1s"  src='/public/logo_white.svg' alt='craftwork')
+      h2.sign-up-block__title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Sign up craftwork digest and get new UI releases every tuesday
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate.wow.animate__fadeIn(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.4s' target='_blank' novalidate='novalidate')
+          .mc-field-group.form-group.position-relative
+            input#mce-EMAIL.email.form-control.valid(type='email' value='' name='EMAIL' aria-invalid='false' placeholder='Enter your email')
+            #mce-responses.clear
+              #mce-error-response.response(style='display:none;')
+              #mce-success-response.response(style='display:none;')
+          div(style='position: absolute; left: -5000px;' aria-hidden='true')
+            input(type='text' name='b_1f4eca0391ca7ebd97f795949_69e024e383' tabindex='-1' value='')
+          input#mc-embedded-subscribe.button_blue(type='submit' value='Subscribe' name='subscribe')
+        script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+        p.sign-up-block__bottom.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") No spam. Only releases, updates and discounts
+  .footer__container
+    include partials/footer
+  include partials/scripts 

@@ -122,7 +122,8 @@ $sign-up-block-row-margins: (
   &__row {
     @include element-indent($sign-up-block-row-margins, 'margin');
 
-    max-width: 1570px;
+    max-width: 1628px;
+    padding: 0 14px;
     display: flex;
     flex-wrap: wrap;
   }

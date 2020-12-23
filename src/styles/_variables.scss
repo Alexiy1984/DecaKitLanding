@@ -35,8 +35,8 @@ $button-colors: (
 
 $main_h1_sizes: (
   null: (36px, 40px, normal),
-  small: (68px, 72px, -1.8px),
-  medium: (72px, 80px, -2px),
+  small: (70px, 74px, -2px),
+  medium: (102px, 100px, -5px),
 );
 
 $main_h2_sizes: (
@@ -49,6 +49,12 @@ $main_h3_sizes: (
   null: (24px, 28px, normal),
   small: (28px, 32px, -0.5px),
   medium: (30px, 40px, -0.7px),
+);
+
+$main_h4_sizes: (
+  null: (18px, 24px, normal),
+  small: (20px, 38px, -0.5px),
+  medium: (22px, 40px, -0.7px),
 );
 
 $main-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.08);
