@@ -23,7 +23,8 @@
     margin-right: 5px;
     transition: fill 0.15s ease-in;
 
-    &.dot {
+    &.dot,
+    &.star {
       height: 12px;
     }
   }
@@ -52,15 +53,6 @@
     svg {
       fill: #f11414;
     }
-  }
-}
-
-.tag_red:hover {
-  color: #000;
-  background-color: #f11414;
-
-  svg {
-    fill: #000;
   }
 }
 
