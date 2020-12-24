@@ -4,17 +4,24 @@
   .card__row
     .card__cell_full
       p.card__title= card_title
-      - var tag_link = '#'
-      - var tag_text = 'Bestseller'
-      - var tag_svg = 'dot'
-      include tag
+      if (bestseller)
+        - var tag_link = '#'
+        - var tag_text = 'Bestseller'
+        - var tag_svg = 'dot'
+        include tag
+      if (exlusive)
+        - var tag_class = 'tag_red'
+        - var tag_link = 'https://craftwork.design/pro-access/'
+        - var tag_text = 'Exlusive'
+        - var tag_svg = 'star'
+        include tag
       - var tag_class = 'tag_green'
       - var tag_link = 'https://craftwork.design/pro-access/'
       - var tag_text = 'Free for Pro'
       - var tag_svg = 'lightning'
       include tag
        - var tag_class = ''
-      p.card__price $48
+      p.card__price $58
   .card__row
     .card__cell
       p.card__description= card_description 

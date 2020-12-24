@@ -39,14 +39,36 @@
     svg {
       fill: #bcfe2f;
     }
+  }
 
-    &:hover {
-      color: #000;
-      background-color: #bcfe2f;
+  &_red {
+    @extend .tag;
 
-      svg {
-        fill: #000;
-      }
+    border-color: #f11414;
+    color: #f11414;
+    transition: color 0.15s ease-in, background-color 0.15s ease-in;
+    background-color: rgba(#000, 0);
+
+    svg {
+      fill: #f11414;
     }
+  }
+}
+
+.tag_red:hover {
+  color: #000;
+  background-color: #f11414;
+
+  svg {
+    fill: #000;
+  }
+}
+
+.tag_green:hover {
+  color: #000;
+  background-color: #bcfe2f;
+
+  svg {
+    fill: #000;
   }
 }

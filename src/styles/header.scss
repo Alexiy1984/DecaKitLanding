@@ -37,9 +37,15 @@
       text-transform: uppercase;
       color: #fff;
       padding: 0 17px;
+      transition: background-color 0.15s ease-in, color 0.15s ease-in;
 
       svg {
         margin-right: 13.25px;
+
+        path {
+          fill: #fff;
+          transition: fill 0.15s ease-in;
+        }
       }
 
       .mobile {
@@ -91,6 +97,7 @@
       text-transform: uppercase;
       color: #fff;
       margin-right: 36px;
+      transition: color 0.15s ease-in;
 
       &:last-child {
         margin-right: 0;
@@ -98,8 +105,21 @@
     }
   }
 
+  .header__menu a:hover {
+    color: #d7fe3c;
+  }
+
   .header__mobile-menu a:hover {
     color: map-get($grey-dark, 03);
+  }
+
+  .header__right:hover a {
+    background-color: #d7fe3c;
+    color: #000;
+  }
+
+  .header__right:hover svg path {
+    fill: #000;
   }
 }
 

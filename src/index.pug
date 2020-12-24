@@ -13,7 +13,7 @@ body
       h1.hero-block__maintitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") Free UI kit for easiest design experience
       p.hero-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") Clean and clear UI Kit with all necessary stuff to create design projects
       .hero-block__button-container
-        a.button_white.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="#") Download for Free
+        a.button_white.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="https://craftwork.design/downloads/deca/") Download for Free
         a.button_white_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
     .inner 
       .hero-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1.2s")
@@ -27,7 +27,6 @@ body
     .discover-components-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
       - var image_name= 'DiscoverCompsImg'
       include partials/picture_generated_single
-      //- img.lazy(data-src='/public/DiscoverCompsImg.svg', alt="Components")     
   .explore-deca-block
     .container
       .explore-deca-block__heading
@@ -82,7 +81,7 @@ body
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") 
         | Have fun with 20 scenes from #[a(href="https://stubborn.fun/") Stubborn Generator] to make your design perfect
     .have-fun-block__button-container
-      a.button_blue.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s" href="#") Get full pack
+      a.button_blue.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s" href="https://stubborn.fun") Get full pack
       a.button_blue_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
     .have-fun-block__img.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s")
       - var image_name= 'HaveFunImg'
@@ -95,12 +94,15 @@ body
     .container
       p.ready-to-go-block__subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s") Clean and clear UI Kit with all necessary stuff to create design projects
       .ready-to-go-block__button-container
-        a.button_black.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="#") Download for Free
+        a.button_black.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="https://craftwork.design/downloads/deca/") Download for Free
         a.button_black_invert.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s" href="https://craftwork.design/downloads/category/ui-kits/") Explore more UI kits
   .sign-up-block
-    .sign-up-block__inner.sign-up-block__top
+    .sign-up-block__top
+      img.sign-up-block__logo.wow.animate__fadeIn(data-wow-duration="1s"  src='/public/logo_white.svg' alt='craftwork')
       h2.title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") More Craftwork assets
       p.subtitle.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s") High-quality design products for those who appreciate the time and choose great results.
+      .sign-up-block__button-container
+        a.button_white.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s" href="https://craftwork.design") Explore all design tools
     .sign-up-block__row
       .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s") 
         p Landing Kit
@@ -111,6 +113,8 @@ body
         - var card_blocks = '200+'
         - var card_layouts = 'Desktop, Mobile'
         - var card_comp = 'Figma, Sketch'
+        - var bestseller = true
+        - var exlusive = true
         include partials/card
       .sign-up-block__column.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")  
         p Wireframe Kit
@@ -121,9 +125,10 @@ body
         - var card_blocks = '480+'
         - var card_layouts = 'Desktop, Mobile'
         - var card_comp = 'Figma, Sketch'
+        - var bestseller = false
+        - var exlusive = false
         include partials/card
     .sign-up-block__inner
-      img.sign-up-block__logo.wow.animate__fadeIn(data-wow-duration="1s"  src='/public/logo_white.svg' alt='craftwork')
       h2.sign-up-block__title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s") Sign up craftwork digest and get new UI releases every tuesday
       #mc_embed_signup
         form#mc-embedded-subscribe-form.validate.wow.animate__fadeIn(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.4s' target='_blank' novalidate='novalidate')

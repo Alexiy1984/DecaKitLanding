@@ -5,9 +5,9 @@ $sign-up-block-paddings: (
 );
 
 $sign-up-logo-margins: (
-  null: (0, 0, 26px, 0),
-  small: (0, 0, 30px, 0),
-  medium: (0, 0, 34px, 0),
+  null: (0, 0, 16px, 0),
+  small: (0, 0, 18px, 0),
+  medium: (0, 0, 20px, 0),
 );
 
 $sign-up-form-margins: (
@@ -24,8 +24,8 @@ $sign-up-block-title-font-sizes: (
 
 $sign-up-block-subtitle-margins: (
   null: (0, 0, 30px, 0),
-  small: (0, 0, 50px, 0),
-  medium: (0, 0, 60px, 0),
+  small: (0, 0, 35px, 0),
+  medium: (0, 0, 38px, 0),
 );
 
 $sign-up-block-title-margins: (
@@ -40,11 +40,24 @@ $sign-up-block-row-margins: (
   medium: (0, auto, 60px, auto),
 );
 
+$sign-up-block-button-container-margins: (
+  null: (0, 0, 60px, 0),
+  small: (0, 0, 70px, 0),
+  medium: (0, 0, 80px, 0),
+);
+
 .sign-up-block {
   @include element-indent($sign-up-block-paddings, 'padding');
 
   background-color: #000;
   color: #fff;
+
+  &__top {
+    max-width: 670px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 30px;
+  }
 
   &__inner {
     max-width: 850px;
@@ -60,7 +73,8 @@ $sign-up-block-row-margins: (
   .subtitle {
     @include element-indent($sign-up-block-subtitle-margins, 'margin');
 
-    color: #fff;
+    color: map-get($grey-dark, 05);
+    font-weight: 400;
   }
 
   &__logo {
@@ -71,6 +85,21 @@ $sign-up-block-row-margins: (
     @include font-size($sign-up-block-title-font-sizes);
 
     font-weight: 500;
+  }
+
+  &__button-container {
+    @include element-indent($sign-up-block-button-container-margins, 'margin');
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    & > * {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   form {
@@ -110,6 +139,12 @@ $sign-up-block-row-margins: (
           color: map-get($grey-dark, 05);
         }
       }
+    }
+  }
+
+  .sign-up-block__button-container > * {
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -174,6 +209,21 @@ $sign-up-block-row-margins: (
 
       &#mce-success-response {
         color: rgb(14, 90, 14);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .sign-up-block {
+    &__button-container {
+      & > * {
+        width: auto;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

@@ -22,6 +22,10 @@
   transition: 0.25s ease-in-out;
 }
 
+#nav-icon:hover span {
+  background: #d7fe3c;
+}
+
 #nav-icon span:nth-child(1) {
   top: 0;
 }
